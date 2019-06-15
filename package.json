@@ -1,6 +1,6 @@
 {
   "name": "jsx-native-events",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "jsx-native-events React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,7 +17,9 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master; npm publish"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -33,13 +35,23 @@
     "eslint-plugin-standard": "^4.0.0",
     "nwb": "0.23.x",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "standard-version": "^6.0.1"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Caleb D. Williams <caleb.d.williams@gmail.com>",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "react-component",
+    "jsx",
+    "dom-events",
+    "events",
+    "dom",
+    "react",
+    "web components",
+    "webcomponents",
+    "custom elements",
+    "customElements",
+    "shadowDOM"
   ]
 }
