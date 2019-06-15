@@ -1,6 +1,6 @@
 {
   "name": "jsx-native-events",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "jsx-native-events React component",
   "main": "lib/index.js",
   "module": "es/index.js",
