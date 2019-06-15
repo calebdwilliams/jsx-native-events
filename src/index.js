@@ -8,7 +8,7 @@ import React from 'react'
 const toKebabCase = string => string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
 const listeners = Symbol('event listeners')
 
-export function ink (type, props, ...children) {
+export default function jsx (type, props, ...children) {
   const newProps = { ...props }
   newProps.ref = (element) => {
     if (element) {
