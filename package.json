@@ -24,6 +24,13 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-standard": "^4.0.0",
     "nwb": "0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
