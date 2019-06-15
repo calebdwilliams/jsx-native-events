@@ -6,6 +6,8 @@ import React from 'react'
  * @return { string } - A kebab-case string
  */
 const toKebabCase = string => string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
+
+/** @type {Symbol} - Used to save reference to active listeners */
 const listeners = Symbol('event listeners')
 
 export default function jsx (type, props, ...children) {
@@ -14,6 +16,7 @@ export default function jsx (type, props, ...children) {
     if (element) {
       if (props) {
         const keys = Object.keys(props)
+        /** Get all keys that have the `onEvent` prefix */
         keys
           .filter(key => key.match(/^onEvent/))
           .map(key =>
@@ -25,11 +28,15 @@ export default function jsx (type, props, ...children) {
             })
           )
           .map(({ eventName, key }) => {
+            /** Add the listeners Map if not present */
             if (!element[listeners]) {
               element[listeners] = new Map()
             }
+
+            /** If the listener hasn't be attached, attach it */
             if (!element[listeners].has(eventName)) {
               element.addEventListener(eventName, props[key])
+              /** Save a reference to avoid listening to the same value twice */
               element[listeners].set(eventName, props[key])
             }
           })
