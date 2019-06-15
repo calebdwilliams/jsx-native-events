@@ -40,7 +40,10 @@
   },
   "author": "Caleb D. Williams <caleb.d.williams@gmail.com>",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebdwilliams/jsx-native-events.git"
+  },
   "keywords": [
     "react-component",
     "jsx",
