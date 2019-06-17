@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-This module adds a custom JSX pragma enabling native DOM events to be handled declaratively in JSX. In traditional JSX, events need to be handled by passind down props to elements such as `onClick` or `onChange` that will be attached to the compiled DOM element at some point during the application's lifecycle. For standard events, this works great; however, for events that aren't as common or for [custructed events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events) or instances of [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent), the prop API falls short.
+This module adds a custom JSX pragma enabling native DOM events to be handled declaratively in JSX. In traditional JSX, events need to be handled by passing down props to elements such as `onClick` or `onChange` that will be attached to the compiled DOM element at some point during the application's lifecycle. For standard events, this works great; however, for events that aren't as common or for [constructed events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events) or instances of [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent), the prop API falls short.
 
 This JSX pragma allows users to declaratively attach event listeners to elements using the `onEvent<EventName>` syntax where `<EventName>` would be replaced by a [camelCase](https://en.wikipedia.org/wiki/Camel_case) version of the event's name. So, a `'click'` event would use the prop `onEventClick` or a custom event with a name of `accordion-toggle` would use the `onEventAccordionToggle` prop.
 
