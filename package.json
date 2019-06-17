@@ -26,6 +26,7 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "@testing-library/react": "^8.0.1",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",

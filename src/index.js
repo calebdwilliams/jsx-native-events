@@ -47,41 +47,6 @@ export default function jsx (type, props, ...children) {
       }
   }
   }
-
-  // if (props) {
-  //   const keys = Object.keys(props)
-  //   const eventKeys = keys.filter(key => key.match(eventPattern))
-
-  //   if (eventKeys.length) {
-  //     const ref = React.createRef()
-  //     newProps.ref = ref
-  //     const element = React.createElement(type, ...newProps, ...children)
-  //     eventKeys
-  //       .map(key => ({
-  //           key,
-  //           eventName: toKebabCase(
-  //             key.replace('onEvent', '')
-  //           ).replace('-', '')
-  //         })
-  //       )
-  //       .map(({ eventName, key }) => {
-  //         console.log(ref)
-  //         /** Add the listeners Map if not present */
-  //         // if (!element[listeners]) {
-  //         //   element[listeners] = new Map()
-  //         // }
-  //         /** If the listener hasn't be attached, attach it */
-  //         // if (!element[listeners].has(eventName)) {
-  //           ref.current.addEventListener(eventName, props[key])
-  //           /** Save a reference to avoid listening to the same value twice */
-  //           // element[listeners].set(eventName, props[key])
-  //         // }
-  //       })
-  //     return active
-  //   }
-  // }
   
-  
-
   return React.createElement.apply(null, [type, newProps, ...children])
 }
