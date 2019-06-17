@@ -24,7 +24,7 @@ If you are familiar with npm, you can install this package using the command
 
 ### [See this example on StackBlitz](https://stackblitz.com/edit/jsx-native-events-demo)
 
-Because the primary output of this package is a JSX pragma, you will first need to include the `/** @jsx <PRAGMA_NAME> */ syntax in your file:
+Because the primary output of this package is a JSX pragma, you will first need to include the `/** @jsx <PRAGMA_NAME> */` syntax in your file.
 
 ```jsx
 /** @jsx nativeEvents */
@@ -45,6 +45,8 @@ export default function SomeComponent (props) {
 In the above example, `<web-component>` is an example of a [custom element](https://css-tricks.com/an-introduction-to-web-components/) that dispatches an event called `custom-event`. In our React application, we want to listen for that custom event and set the name every time the event is emitted.
 
 Using the `/** @jsx nativeEvents */` pragma at the top of the file lets JSX know that we want to use the function imported in line 3 (`import nativeEvents from 'jsx-native-events'`) as an addition to React's built-in JSX engine.
+
+The new props will only work for implementations of [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), so the new props are not ignored on React components, but should work on all DOM elements represented by React's JSX.
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo

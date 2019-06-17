@@ -1,7 +1,7 @@
 {
   "name": "jsx-native-events",
   "version": "0.0.2",
-  "description": "jsx-native-events React component",
+  "description": "Add native event handling to React's JSX to support custom event types",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
