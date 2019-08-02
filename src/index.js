@@ -16,12 +16,21 @@ export default function jsx (type, props, ...children) {
   const newProps = { ...props }
   if (typeof type === 'string') {
     newProps.ref = (element) => {
+      // merge existing ref prop
+      if (props && props.ref) {
+        if (typeof props.ref === 'function') {
+          props.ref(element)
+        } else if (typeof props.ref === 'object') {
+          props.ref.current = element
+        }
+      }
+
       if (element) {
         if (props) {
           const keys = Object.keys(props)
           /** Get all keys that have the `onEvent` prefix */
           keys
-            .filter(key => key.match(/^onEvent/))
+            .filter(key => key.match(eventPattern))
             .map(key =>
               ({
                 key,

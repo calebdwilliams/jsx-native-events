@@ -26,6 +26,8 @@ If you are familiar with npm, you can install this package using the command
 
 Because the primary output of this package is a JSX pragma, you will first need to include the `/** @jsx <PRAGMA_NAME> */` syntax in your file.
 
+Or add `pragma: "nativeEvents"` to your [`@babel/preset-react`](https://babeljs.io/docs/en/babel-preset-react) or [`@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx) babel config.
+
 ```jsx
 /** @jsx nativeEvents */
 import React, { useState } from 'react'
