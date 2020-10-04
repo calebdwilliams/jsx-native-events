@@ -8,3 +8,4 @@ npm-debug.log*
 .npmrc
 .idea
 yarn.lock
+.DS_Store
